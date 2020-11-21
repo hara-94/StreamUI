@@ -56,7 +56,11 @@ final class StreamView: UIView {
     }
 }
 
-extension StreamView: UITableViewDelegate { }
+extension StreamView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
 
 extension StreamView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

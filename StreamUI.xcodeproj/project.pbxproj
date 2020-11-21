@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32B7AF272568DC1C0011C6B3 /* StreamMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7AF262568DC1C0011C6B3 /* StreamMessage.swift */; };
+		32B7AF322568F70B0011C6B3 /* TopRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7AF312568F70B0011C6B3 /* TopRouter.swift */; };
 		C762F5002567ABFE0073A920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762F4FF2567ABFE0073A920 /* AppDelegate.swift */; };
 		C762F5022567ABFE0073A920 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762F5012567ABFE0073A920 /* SceneDelegate.swift */; };
 		C762F5042567ABFE0073A920 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762F5032567ABFE0073A920 /* TopViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		32B7AF262568DC1C0011C6B3 /* StreamMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamMessage.swift; sourceTree = "<group>"; };
+		32B7AF312568F70B0011C6B3 /* TopRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRouter.swift; sourceTree = "<group>"; };
 		C762F4FC2567ABFE0073A920 /* StreamUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C762F4FF2567ABFE0073A920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C762F5012567ABFE0073A920 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				C762F5032567ABFE0073A920 /* TopViewController.swift */,
 				C762F5362567B3940073A920 /* TopPresenter.swift */,
+				32B7AF312568F70B0011C6B3 /* TopRouter.swift */,
 			);
 			path = Top;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				C762F5022567ABFE0073A920 /* SceneDelegate.swift in Sources */,
 				C762F5AE2567EB8B0073A920 /* StreamViewModel.swift in Sources */,
 				C762F54C2567E52E0073A920 /* StreamView.swift in Sources */,
+				32B7AF322568F70B0011C6B3 /* TopRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
