@@ -10,6 +10,9 @@ import UIKit
 final class TopViewController: UIViewController {
     private let tableView: UITableView = .init()
     private let resource = [Int](0...20)
+    private let colors: [UIColor] = [
+        .red, .blue, .yellow, .magenta, .orange, .brown, .gray, .green, .cyan, .purple, .systemPink, .systemIndigo
+    ]
     var presenter: TopPresenter!
     
     override func loadView() {
@@ -17,6 +20,7 @@ final class TopViewController: UIViewController {
         view.addSubview(tableView)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
@@ -43,8 +47,9 @@ extension TopViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = .init()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = "\(resource[indexPath.row])"
+        cell.backgroundColor = colors[Int.random(in: 0...colors.count-1)]
         return cell
     }
 }

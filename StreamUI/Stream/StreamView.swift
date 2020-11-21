@@ -30,10 +30,22 @@ final class StreamView: UIView {
     }
     
     private func set() {
+        let blurEffect: UIBlurEffect = .init(style: .light)
+        let effectView: UIVisualEffectView = .init(effect: blurEffect)
+        addSubview(effectView)
+        effectView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            effectView.topAnchor.constraint(equalTo: topAnchor),
+            effectView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            effectView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            effectView.trailingAnchor.constraint(equalTo: trailingAnchor)
+        ])
         addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: topAnchor),
@@ -49,15 +61,13 @@ extension StreamView: UITableViewDelegate { }
 extension StreamView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let viewModel = viewModel else { return 0 }
-        print("count: \(viewModel.messages.count)")
         return viewModel.messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.backgroundColor = .black
         cell.textLabel?.text = viewModel?.messages[indexPath.row].text
-        cell.textLabel?.textColor = .white
+        cell.backgroundColor = .clear
         return cell
     }
 }
@@ -67,6 +77,9 @@ extension StreamView {
         viewModel?.messages.append(message)
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            if let viewModel = self.viewModel {
+                self.tableView.scrollToRow(at: .init(row: viewModel.messages.count-1, section: 0), at: .bottom, animated: true)
+            }
         }
     }
 }

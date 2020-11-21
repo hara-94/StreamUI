@@ -20,7 +20,7 @@ final class StreamService {
         NSLayoutConstraint.activate([
             streamView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
             streamView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
-            streamView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            streamView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -16),
             streamView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8)
         ])
     }

@@ -30,7 +30,7 @@ final class StreamInteractor {
     
     func getMessages() -> Observable<StreamMessage> {
         let subject = PublishSubject<StreamMessage>()
-        let strings = [Int](1...10).map { "\($0)" }
+        let strings = [Int](1...15).map { "\($0)" }
         DispatchQueue.global().async {
             for string in strings {
                 Thread.sleep(forTimeInterval: 0.5)
