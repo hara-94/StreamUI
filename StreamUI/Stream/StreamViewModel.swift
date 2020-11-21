@@ -8,5 +8,5 @@
 import Foundation
 
 struct StreamViewModel {
-    var messages: [String]
+    var messages: [StreamMessage]
 }

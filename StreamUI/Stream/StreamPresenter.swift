@@ -18,20 +18,25 @@ final class StreamPresenter {
     }
     
     func didLoad() {
-        interactor.getMessages().subscribe(onNext: { string in
-            self.view.update(string)
+        interactor.getMessages().subscribe(onNext: { message in
+            self.view.update(message)
         }).disposed(by: disposeBag)
     }
 }
 
 final class StreamInteractor {
-    func getMessages() -> Observable<String> {
-        let subject = PublishSubject<String>()
-        let ints = [Int](1...20)
-        let strings = ints.map { "\($0)" }
-        for string in strings {
-            Thread.sleep(forTimeInterval: 0.6)
-            subject.onNext(string)
+    let subject = PublishSubject<StreamMessage>()
+    
+    
+    func getMessages() -> Observable<StreamMessage> {
+        let subject = PublishSubject<StreamMessage>()
+        let strings = [Int](1...10).map { "\($0)" }
+        DispatchQueue.global().async {
+            for string in strings {
+                Thread.sleep(forTimeInterval: 0.5)
+                let message: StreamMessage = .init(text: string)
+                subject.onNext(message)
+            }
         }
         return subject
     }

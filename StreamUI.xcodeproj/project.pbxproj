@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32B7AF272568DC1C0011C6B3 /* StreamMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7AF262568DC1C0011C6B3 /* StreamMessage.swift */; };
 		C762F5002567ABFE0073A920 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762F4FF2567ABFE0073A920 /* AppDelegate.swift */; };
 		C762F5022567ABFE0073A920 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762F5012567ABFE0073A920 /* SceneDelegate.swift */; };
 		C762F5042567ABFE0073A920 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762F5032567ABFE0073A920 /* TopViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32B7AF262568DC1C0011C6B3 /* StreamMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamMessage.swift; sourceTree = "<group>"; };
 		C762F4FC2567ABFE0073A920 /* StreamUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C762F4FF2567ABFE0073A920 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C762F5012567ABFE0073A920 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32B7AF252568DC080011C6B3 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				32B7AF262568DC1C0011C6B3 /* StreamMessage.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		C762F4F32567ABFE0073A920 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		C762F4FE2567ABFE0073A920 /* StreamUI */ = {
 			isa = PBXGroup;
 			children = (
+				32B7AF252568DC080011C6B3 /* Entity */,
 				C762F54A2567E51F0073A920 /* Stream */,
 				C762F5352567B3840073A920 /* Top */,
 				C762F4FF2567ABFE0073A920 /* AppDelegate.swift */,
@@ -321,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C762F5372567B3940073A920 /* TopPresenter.swift in Sources */,
+				32B7AF272568DC1C0011C6B3 /* StreamMessage.swift in Sources */,
 				C762F5042567ABFE0073A920 /* TopViewController.swift in Sources */,
 				C762F5B32567EDD50073A920 /* StreamPresenter.swift in Sources */,
 				C762F5D22568AA3D0073A920 /* StreamService.swift in Sources */,

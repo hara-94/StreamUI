@@ -23,6 +23,11 @@ final class TopViewController: UIViewController {
             tableView.heightAnchor.constraint(equalTo: view.heightAnchor)
         ])
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        StreamService.shared.display(in: view, at: .third)
+    }
 }
 
 extension TopViewController: UITableViewDelegate {

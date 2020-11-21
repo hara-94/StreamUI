@@ -14,7 +14,15 @@ final class StreamService {
     func display(in view: UIView, at qadrant: Qadrant) {
         let streamView: StreamView = .init()
         streamView.presenter = .init(view: streamView)
-        
+        streamView.presenter.didLoad()
+        view.addSubview(streamView)
+        streamView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            streamView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            streamView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5),
+            streamView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            streamView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8)
+        ])
     }
 }
 
