@@ -9,11 +9,13 @@ import UIKit
 
 final class StreamView: UIView {
     private let tableView: UITableView = .init()
-    weak var presenter: StreamPresenter!
+    var presenter: StreamPresenter!
+    var viewModel: StreamViewModel?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         set()
+        presenter.didLoad()
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +38,8 @@ extension StreamView: UITableViewDelegate { }
 
 extension StreamView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        guard let viewModel = viewModel else { return 0 }
+        return viewModel.messages.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,7 +48,8 @@ extension StreamView: UITableViewDataSource {
 }
 
 extension StreamView {
-    func update(_ update: StreamViewModel) {
-        
+    func update(_ message: String) {
+        viewModel?.messages.append(message)
+        tableView.reloadData()
     }
 }

@@ -23,6 +23,7 @@
 		C762F5A92567EA0E0073A920 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = C762F5A82567EA0E0073A920 /* RxBlocking */; };
 		C762F5AE2567EB8B0073A920 /* StreamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762F5AD2567EB8B0073A920 /* StreamViewModel.swift */; };
 		C762F5B32567EDD50073A920 /* StreamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762F5B22567EDD50073A920 /* StreamPresenter.swift */; };
+		C762F5D22568AA3D0073A920 /* StreamService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762F5D12568AA3D0073A920 /* StreamService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		C762F54B2567E52E0073A920 /* StreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamView.swift; sourceTree = "<group>"; };
 		C762F5AD2567EB8B0073A920 /* StreamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamViewModel.swift; sourceTree = "<group>"; };
 		C762F5B22567EDD50073A920 /* StreamPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamPresenter.swift; sourceTree = "<group>"; };
+		C762F5D12568AA3D0073A920 /* StreamService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				C762F54B2567E52E0073A920 /* StreamView.swift */,
 				C762F5AD2567EB8B0073A920 /* StreamViewModel.swift */,
 				C762F5B22567EDD50073A920 /* StreamPresenter.swift */,
+				C762F5D12568AA3D0073A920 /* StreamService.swift */,
 			);
 			path = Stream;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				C762F5372567B3940073A920 /* TopPresenter.swift in Sources */,
 				C762F5042567ABFE0073A920 /* TopViewController.swift in Sources */,
 				C762F5B32567EDD50073A920 /* StreamPresenter.swift in Sources */,
+				C762F5D22568AA3D0073A920 /* StreamService.swift in Sources */,
 				C762F5002567ABFE0073A920 /* AppDelegate.swift in Sources */,
 				C762F5022567ABFE0073A920 /* SceneDelegate.swift in Sources */,
 				C762F5AE2567EB8B0073A920 /* StreamViewModel.swift in Sources */,
